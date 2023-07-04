@@ -1,0 +1,11 @@
+cells = [
+  [ "a", "b", "c", ],
+  [ "1", "2", "3", ],
+  [ "text", "text", "texts are center aligned", ],
+]
+cell_widths = [8000, 8000, 24000]
+cell_height = 2000
+text_height = 1000
+relative_x_scale_factor = 0.85
+primary_font_file_name = "YuGothic"
+big_font_file_name = "YuGothic"
