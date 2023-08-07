@@ -1,5 +1,5 @@
 [package]
-name = "dxf-table"
+name = "stdr-table"
 version = "0.1.0"
 edition = "2021"
 
