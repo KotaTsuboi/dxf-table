@@ -1,11 +1,11 @@
 use crate::input::TomlInput;
+use anyhow::Result;
 use dxf::entities::*;
 use dxf::enums::HorizontalTextJustification;
 use dxf::enums::VerticalTextJustification;
 use dxf::tables::Style;
 use dxf::Drawing;
 use dxf::Point;
-use std::error::Error;
 
 fn add_lines(input: &TomlInput, drawing: &mut dxf::Drawing) {
     let num_rows = input.cells.len();
@@ -92,7 +92,7 @@ fn add_texts(input: &TomlInput, drawing: &mut dxf::Drawing) {
     }
 }
 
-pub fn write(input: TomlInput, output_file: String) -> Result<(), Box<dyn Error>> {
+pub fn write(input: TomlInput, output_file: &str) -> Result<()> {
     let mut drawing = Drawing::new();
 
     add_lines(&input, &mut drawing);
